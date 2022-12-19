@@ -11,7 +11,7 @@ function checklog(){
         console.log("login is true")
     }else{
         console.log("login is false")
-    window.location.assign("/login/src/login.html")
+    window.location.assign("/VanillaProject/login/src/login.html")
     }
 }
 
