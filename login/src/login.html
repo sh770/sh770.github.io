@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../src/master.css">
     <script src="script.js" defer></script>
-    <link rel="stylesheet" href=>
     <title>Login</title>
 </head>
 <body>
@@ -14,11 +13,12 @@
         <div class="login">
             <h1>Login</h1>
             <form>
-                <input type="text" name="username" placeholder="Username">
-                <input type="password" name="password" placeholder="Password">
+                <input type="text" id="username" placeholder="Username">
+                <input type="password" id="password" placeholder="Password">
             </form>
-                <button onclick="get_data()">Login</button>
+                <button onclick="get_users()">Login</button>
         </div>
-    </div>
+        <label id="lbl"></label>
+        </div>
 </body>
 </html>
