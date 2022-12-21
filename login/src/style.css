@@ -1,0 +1,78 @@
+/* center the login form in the middle of the screen */
+body{
+    direction: rtl;
+    background-color: black;
+    color: wheat;
+}
+
+.container {
+    width: 50%;
+    height: 50%;
+    padding: auto;
+    margin: auto;
+    position: relative;
+    top: auto;
+    left: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.login-form {
+    margin-top: 50px;
+    width: 500px;
+    height: 500px;
+    border: 3px solid red;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 3px solid white;
+    box-sizing: border-box;
+    background-color: greenyellow;
+  }
+  
+  /* Set a style for all buttons */
+button {
+    background-color: aquamarine;
+    color: red;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: 4px solid gold;
+    border-radius: 30%;
+    cursor: pointer;
+    width: auto;
+    font-size: large;
+    font-weight: bold;
+  }
+  
+  /* Add a hover effect for buttons */
+  button:hover {
+    background-color: blueviolet;
+    opacity: 0.8;
+  }
+
+
+
+  #admin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: none;
+  }

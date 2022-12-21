@@ -1,24 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../src/master.css">
+    <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <title>Login</title>
 </head>
+
 <body>
-    <div class="container">
-        <div class="login">
-            <h1>Login</h1>
+    <div class="container ">
+        <div id="form" class="container login-form">
+            <h1>אימות</h1>
             <form>
-                <input type="text" id="username" placeholder="Username">
-                <input type="password" id="password" placeholder="Password">
+                <label for="name">שם</label>
+                <input type="text" name="name" id="username" placeholder="שם">
+                <label for="password">סיסמה</label>
+                <input type="password" name="password" id="password" placeholder="סיסמה">
             </form>
-                <button onclick="get_users()">Login</button>
+            <button id="button" onclick="get_users()">אמת</button>
+            <br><br>
+            <h2><label id="lbl"></label></h2>
         </div>
-        <label id="lbl"></label>
-        </div>
+    </div>
+    <div class="container" id="admin">
+        <script src="admin.js"></script>
+        <br>
+    </div>
+    </div>
 </body>
+
 </html>
