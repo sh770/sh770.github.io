@@ -1,6 +1,5 @@
 let userName;
 let passWord;
-// assets\static\users.json
 async function get_users8() {
     const response = await fetch("../../assets/static/users.json");
     const data = await response.json();
@@ -24,7 +23,7 @@ async function get_users() {
         localStorage.setItem("password", passWord);
         document.getElementById("lbl").textContent = "אתה מחובר"
         localStorage.setItem("user", "login")
-        window.location.assign("/../../VanillaProject/website/src/index.html")
+        window.location.assign("/../../website/src/index.html")
         // console.log(999);
 
     } else {
