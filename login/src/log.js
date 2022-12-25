@@ -2,6 +2,7 @@ let counter = 0;
 
 let userName;
 let passWord;
+
 async function get_users8() {
     const response = await fetch("../../assets/static/users.json");
     const data = await response.json();
@@ -38,7 +39,6 @@ async function get_users() {
     document.getElementById("password").value = "";
 }
 
-
 function count() {
     counter++
     // alert(0)
@@ -50,11 +50,11 @@ function count() {
     }
     else if (counter == 3) {
         document.getElementById("lbl2").textContent = "נגמרו לך הנסיונות"
-        document.getElementById("lbl3").textContent = "תוכל לנסות שוב בעוד 5 דקות"
+        document.getElementById("lbl3").textContent = "תוכל לנסות שוב בעוד 3 דקות"
         resetCounter()
-        // console.log(5555)
+        console.log(5555)
     }
-    localStorage.setItem("counter",counter)
+    localStorage.setItem("counter", counter)
 
 }
 
@@ -69,5 +69,5 @@ const resetCounter = () => {
         document.getElementById("button").disabled = false;
         localStorage.setItem("counter", 0)
 
-    }, 300000)
+    }, 3000)
 }
