@@ -17,6 +17,8 @@ function checklog() {
 checklog();
 
 function logout() {
-    localStorage.clear();
+    // alert(770)
+    localStorage.removeItem("user");
+    // localStorage.clear();
     window.location.assign("/login/src/login.html")
 }
