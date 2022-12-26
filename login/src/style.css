@@ -14,7 +14,7 @@ body{
     top: auto;
     left: auto;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
 }
