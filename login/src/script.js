@@ -69,5 +69,5 @@ const resetCounter = () => {
         document.getElementById("button").disabled = false;
         localStorage.setItem("counter", 0)
 
-    }, 10000)
+    }, 30000)
 }
