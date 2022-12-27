@@ -1,4 +1,25 @@
-let counter = 0;
+// let counter = 0;
+
+let counter =0;
+
+function counterll(){
+if (!localStorage.getItem("counter")) {
+
+    localStorage.setItem("counter", 0);
+    counter = localStorage.getItem("counter");
+    console.log(counter + " no counter");
+
+} else {
+    counter = localStorage.getItem("counter");
+    counter++
+
+    localStorage.setItem("counter", counter)
+
+    console.log(counter)
+}
+}
+counterll()
+console.log(counter + " all")
 
 let userName;
 let passWord;

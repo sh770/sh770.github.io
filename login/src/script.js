@@ -1,5 +1,31 @@
 let counter = 0;
 
+
+function counterll() {
+    if (!localStorage.getItem("counter")) {
+
+        localStorage.setItem("counter", 0);
+        counter = localStorage.getItem("counter");
+        console.log(counter + " no counter");
+
+    } else {
+        counter = localStorage.getItem("counter");
+        // counter++
+
+        localStorage.setItem("counter", counter)
+
+        console.log(counter)
+    }
+    if (counter >= 3) {
+        document.getElementById("lbl2").textContent = "נגמרו לך הנסיונות"
+        document.getElementById("lbl3").textContent = "תוכל לנסות שוב בעוד 3 דקות"
+        resetCounter()
+        console.log(5555)
+    }
+    localStorage.setItem("counter", counter)
+}
+
+
 let userName;
 let passWord;
 
@@ -71,3 +97,6 @@ const resetCounter = () => {
 
     }, 30000)
 }
+
+counterll()
+console.log(counter + " all")
