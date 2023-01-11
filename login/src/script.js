@@ -44,25 +44,40 @@ async function get_users8() {
     }
     return false
 }
-async function get_users() {
+
+function checknull() {
     document.getElementById("lbl").textContent = ""
-    let a = await get_users8()
-    if (a == true) {
-        localStorage.setItem("username", userName);
-        localStorage.setItem("password", passWord);
-        document.getElementById("lbl").textContent = "אתה מחובר"
-        localStorage.setItem("user", "login")
-        window.location.assign("/../../website/src/index.html")
-        // console.log(999);
-
+    userName = document.getElementById("username").value;
+    passWord = document.getElementById("password").value;
+    if ((userName == "") || (passWord == "")) {
+        document.getElementById("lbl").textContent = "שם או סיסמה ריקים"
+        document.getElementById("username").value = "";
+        document.getElementById("password").value = "";
+        console.log("error");
     } else {
-        document.getElementById("lbl").textContent = "שם או סיסמה שגויים"
-        count();
-
-        // alert("שם או סיסמה שגויים");
+        get_users()
     }
-    document.getElementById("username").value = "";
-    document.getElementById("password").value = "";
+    async function get_users() {
+        document.getElementById("lbl").textContent = ""
+
+        let a = await get_users8()
+        if (a == true) {
+            localStorage.setItem("username", userName);
+            localStorage.setItem("password", passWord);
+            document.getElementById("lbl").textContent = "אתה מחובר"
+            localStorage.setItem("user", "login")
+            window.location.assign("/../../website/src/index.html")
+            // console.log(999);
+
+        } else {
+            document.getElementById("lbl").textContent = "שם או סיסמה שגויים"
+            count();
+
+            // alert("שם או סיסמה שגויים");
+        }
+        document.getElementById("username").value = "";
+        document.getElementById("password").value = "";
+    }
 }
 
 function count() {
@@ -86,6 +101,7 @@ function count() {
 
 const resetCounter = () => {
     document.getElementById("button").disabled = true;
+    document.getElementById("button").style.display = "none";
     setTimeout(() => {
         counter = 0;
         document.getElementById("lbl").textContent = ""
@@ -93,6 +109,8 @@ const resetCounter = () => {
         document.getElementById("lbl3").textContent = ""
         console.log(`Counter reset to ${counter}`);
         document.getElementById("button").disabled = false;
+        document.getElementById("button").style.display = "block";
+
         localStorage.setItem("counter", 0)
 
     }, 30000)
